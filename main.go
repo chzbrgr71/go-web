@@ -130,7 +130,7 @@ var tmpl = template.Must(template.New("tmpl").Parse(`
 <!DOCTYPE html><html><body>
 	<h2>Simple Golang Web App</h2>
 	<p>This is Brian Redmond's web app</p>
-	<p>Version 1.0</p>
+	<p>Version 1.1</p>
 	<br>
 	<img src="http://natebrennand.github.io/concurrency_and_golang/pics/gopher_head.png">
 </body></html>
