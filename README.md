@@ -1,1 +1,1 @@
-# go-web
+# Simple golang app to test web containers
