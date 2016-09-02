@@ -13,14 +13,14 @@
     "volumes": [],
     "docker": {
       "image": "chzbrgr71/go-web",
-      "network": "HOST",
+      "network": "BRIDGE",
       "portMappings": [
         {
           "containerPort": 8001,
           "hostPort": 0,
-          "servicePort": 10025,
+          "servicePort": 10071,
           "protocol": "tcp",
-          "name": "www",
+          "name": "goweb",
           "labels": {
           }
         }
@@ -32,12 +32,5 @@
   },
   "labels": {
     "HAPROXY_GROUP": "external"
-  },
-  "portDefinitions": [
-    {
-      "port": 10025,
-      "protocol": "tcp",
-      "labels": {}
-    }
-  ]
+  }
 }
