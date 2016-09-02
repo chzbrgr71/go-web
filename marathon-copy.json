@@ -13,7 +13,7 @@
     "volumes": [],
     "docker": {
       "image": "chzbrgr71/go-web",
-      "network": "HOST",
+      "network": "BRIDGE",
       "portMappings": [
         {
           "containerPort": 8001,
