@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: go-web
-        image: briarregistry-microsoft.azurecr.io/chzbrgr71/go-web
+        image: chzbrgr71/go-web
         ports:
           - containerPort: 8001
       imagePullSecrets:
