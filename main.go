@@ -9,6 +9,7 @@ import (
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	// begin web page
 	var hostPlatform = os.Getenv("HOST_PLATFORM")
+	//var hostPlatform = "Azure Container Instance"
 
 	var htmlHeader = "<!DOCTYPE html><html><h2>Simple web app</h2>"
 	fmt.Fprintf(w, htmlHeader)

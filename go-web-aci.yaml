@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: go-web-aci
+  namespace: default
+spec:
+  containers:
+  - name: go-web-aci
+    image: chzbrgr71/go-web:aci
+    env:
+    - name: HOST_PLATFORM
+      value: "Azure Container Instance"
+    ports:
+      - containerPort: 8080
+  imagePullSecrets:
+    - name: acrregistrykey
+  dnsPolicy: ClusterFirst
+  nodeName: aci-connector
