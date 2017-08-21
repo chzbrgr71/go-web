@@ -5,5 +5,5 @@
 ## How to run
  
   ```
-  docker run -d --name go-web -p 8001:8001 chzbrgr71/go-web
+  docker run -d --name go-web -e "HOST_PLATFORM=localhost" -p 8080:8080 chzbrgr71/go-web
   ```

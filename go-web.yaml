@@ -8,7 +8,7 @@ spec:
   type: LoadBalancer
   ports:
   - port: 8080
-    targetPort: 8001
+    targetPort: 8080
   selector:
     run: go-web
 ---
@@ -17,7 +17,7 @@ kind: Deployment
 metadata:
   name: go-web
 spec:
-  replicas: 5
+  replicas: 3
   template:
     metadata:
       labels:
@@ -27,7 +27,8 @@ spec:
       containers:
       - name: go-web
         image: chzbrgr71/go-web
+        env:
+        - name: HOST_PLATFORM
+          value: "ACS Kubernetes"
         ports:
-          - containerPort: 8001
-      imagePullSecrets:
-        - name: myregistrykey
+          - containerPort: 8080
