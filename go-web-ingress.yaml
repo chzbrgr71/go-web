@@ -5,12 +5,25 @@ metadata:
   labels:
     app: go-web
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - port: 8080
     targetPort: 8080
   selector:
     run: go-web
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: go-web-ingress
+spec:
+  rules:
+  - host: go-web.brianredmond.co
+    http:
+      paths:
+      - backend:
+          serviceName: go-web
+          servicePort: 8080
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
