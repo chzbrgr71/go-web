@@ -1,3 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: go-web
+  labels:
+    app: go-web
+spec:
+  selector:
+    run: go-web
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
